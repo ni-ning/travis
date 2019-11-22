@@ -5,6 +5,12 @@ notifications:
 
 sudo: false
 
+
+env:
+  global:
+    - secure: "JRdWeTGYmln6q7KkgV1lBD7FZWJHoyVLDSx21sdgPAb6Lb3xoV4m1G6PofItbMSHhPNX0F5ZYypcXXPnNv0rCDexEWXb/0n8AMsQO+gL8H2E9eqom5q3EAAKG02iSNGMcH4frOrRW7pHJQAoTiEFMySdNPE6ryGl2O/b+jTLO2ioqcE1l14b3vVKn00yoPsykQ9Rgx9DaqKCqtUt4oL9N1Pg2V49l7/uvP038QdSswTxXz0gvgJBlRdJEilI+f3eJQ1+iV3ea2eN0kMzaYmqUG0SlswqBII5QQum9kKI8kUaMBrpl7OusHdfuhHcxrBJm2+MO2jRN3Y8nLfNV6+eiJ2/q/IzqyPwWqhsfRE/kPLK+kHmi1u2h2XFQ1tzKzmutkASVncaJuRoFUPf5eA1ltgTzLYNbpCNnff8jAfchz7xTLuq1QlxI4G7y6DVeRgyZOfv5waoX/R4eFgTuJhQtxn4JVKvxEtKWnfD0acAyZVog52RoVDDSRjgVXkOkycZfjBXXYaUUlEvcFv0MeTzliJkPbb9ZYzY1NQsxXPlKlqxpqKDqn/deuxTHK6dhe5BzplS3hbtkprPLFhctQ2Dz4W18w4EHJsNkuJ9jFvjEAopiFgca8q7L5Km9lok9Ggfjoicim9F5xmKaa1L6Sm1gjgBfL59rnW4EAigb7r+Wwo="
+
+
 matrix:
   include:
     - env: TOX_ENV=py37
