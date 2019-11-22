@@ -1,26 +1,18 @@
 language: python
-
 notifications:
   email: false
-
 sudo: false
-
-
-env:
-  global:
-    - secure: "JRdWeTGYmln6q7KkgV1lBD7FZWJHoyVLDSx21sdgPAb6Lb3xoV4m1G6PofItbMSHhPNX0F5ZYypcXXPnNv0rCDexEWXb/0n8AMsQO+gL8H2E9eqom5q3EAAKG02iSNGMcH4frOrRW7pHJQAoTiEFMySdNPE6ryGl2O/b+jTLO2ioqcE1l14b3vVKn00yoPsykQ9Rgx9DaqKCqtUt4oL9N1Pg2V49l7/uvP038QdSswTxXz0gvgJBlRdJEilI+f3eJQ1+iV3ea2eN0kMzaYmqUG0SlswqBII5QQum9kKI8kUaMBrpl7OusHdfuhHcxrBJm2+MO2jRN3Y8nLfNV6+eiJ2/q/IzqyPwWqhsfRE/kPLK+kHmi1u2h2XFQ1tzKzmutkASVncaJuRoFUPf5eA1ltgTzLYNbpCNnff8jAfchz7xTLuq1QlxI4G7y6DVeRgyZOfv5waoX/R4eFgTuJhQtxn4JVKvxEtKWnfD0acAyZVog52RoVDDSRjgVXkOkycZfjBXXYaUUlEvcFv0MeTzliJkPbb9ZYzY1NQsxXPlKlqxpqKDqn/deuxTHK6dhe5BzplS3hbtkprPLFhctQ2Dz4W18w4EHJsNkuJ9jFvjEAopiFgca8q7L5Km9lok9Ggfjoicim9F5xmKaa1L6Sm1gjgBfL59rnW4EAigb7r+Wwo="
-
-
 matrix:
   include:
-    - env: TOX_ENV=py37
-      python: 3.7
+  - env: TOX_ENV=py37
+    python: 3.7
 install:
-  - pip install tox
-  - pip install "flake8>3.7"
-
+- pip install tox
+- pip install "flake8>3.7"
 before_script:
-  - "flake8 ."
-
-script:
-  tox -e $TOX_ENV
+- flake8 .
+script: tox -e $TOX_ENV
+env:
+  global:
+  - secure: KI59rvspevZi28LsQrR8ItXy8sSBZlREzlu6xxV/fzksnBwsc88fwe1sBBOqLXgcKF3amCNQG+rV/z+aAUdOGC7dm7VDlIeXKV+klKdYWKUE2kMt4eLvzhIER0DhQPWcpoeYCauXVTg67W5lcoAfql0hLyyvreKtvvHMVOk0rASXC92+QM6luYnIOUbfwDr5fZhvn3fLJQiGqqA/DO4HGMh+sN1ZLvzNpgW9quyn4q4FCMXv42a5WZ2yM/AAZfL6BmQjJA6KgnvL1zoIqILNI7Cqudk+ntqu6yf8mBmganjcwbsoDZxtG1VKEcmtVhChZhrLMQow3GWMiUp/HcAITQAXqpC8YijNr/O4uroMX8qXwwCRuBidkqOHZpdgVefIx2mCZVPioSmuIZokrlIgUMIdwieClbisaYLtaEacV4YfwQGkI8qC6jO7Xb3i85QUTS3Vpq14Vyjb6s1N0OB+h1qG0spc14MIugM7rB8OnzMds5BC+9nM6NOOGT9Qn0117EOZI0gDyjdtN1OcZYJD0EHQ8IutJLw6y07GsjRandXwWU1/DwI+eWQ4P2w5s+6GgsRAdMHwMtB4dJYw00SjcPX2SQiI3g83otojGizwQCl1cn0dPpOG8eqpuVqro0FG+wdIpVBQs4KGGtq9nd+OHGkEmVpI5jsggrHdS0GFAaI=
+  - secure: k3rylW2z0DW3omtah12HbbXY8p1W8bdSMz7lVlOBOFNGL419XhUmdn4I3w8X+/2aEuo5VGuym8+FEZgZTyzUG8aAMhWQpwwNus4LGowejbgR24Pii8BBRxDNScSELM8s/++ZuPCXxes75nd5J2iCfaBnSGdqIVgqlz2dyKKgL3CDrFXJZRLBUR/s710RugKMA+OpT9Yjjw27bmCLBliXpVjUDT9L+CWvrGPeKuJr6b/ex0VDLX9Q712XzBzIfh6hbT2l9Nork8s1UGBDpVtI4KammeYjrF43xk9k3gam+N7ciLAjgPeSJUAThvU4+kYwe/wijnoW/1H4PI+dKlMtJHoxBRDtkwdZGskJO5BCM+HuOcNOBfLraYFvMWS+hteotMXDT2NHT4mxLJKMRAiqY3hLODkSWCON6QAoqgArmMvw3AVL9h8bKIltrigJoOfuDNlqr0XTHdFlGkv18uUofSrcENl/K2syW8jdBaXKcmlLeVoXNuzncWS1dAlKHtxPy0QhogDM9gzkcmcmtlwBSOyUZV8mAszaL5dztm59ZeUCrL34Ak5jquF1t6cqrIvRDv7inlI2n/7C86N90qEqkEp+ZAKCLzPivKbq6jIVK0L+Z9i8rKfN53aisD/aXdPmR9a4lX29cKI3LZT3BfZGoJR/rEuQgAh2mSJhDbWNfR8=

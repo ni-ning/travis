@@ -12,5 +12,6 @@ def test_answer():
 def test_environ():
     import os
     print(os.environ)
-    print(os.environ['NAME'])
+    print(os.environ['CORP_ID'])
+    print(os.environ['CORP_SECRET'])
     assert True
