@@ -9,7 +9,8 @@ def test_answer():
     assert func(3) == 4
 
 
-def test_linda():
+def test_environ():
     import os
-    print(os.environ['NAME'])
-    assert func(100) == 101
+    print(os.environ)
+    print(os.environ.get('NAME'))
+    assert True
