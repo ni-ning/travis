@@ -12,5 +12,5 @@ def test_answer():
 def test_environ():
     import os
     print(os.environ)
-    print(os.environ.get('NAME'))
+    print(os.environ['NAME'])
     assert True
