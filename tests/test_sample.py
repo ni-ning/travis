@@ -10,4 +10,6 @@ def test_answer():
 
 
 def test_linda():
+    import os
+    print(os.environ['NAME'])
     assert func(100) == 101
