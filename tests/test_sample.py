@@ -12,6 +12,6 @@ def test_answer():
 def test_environ():
     import os
     print(os.environ)
-    print(os.environ['CORP_ID'])
-    print(os.environ['CORP_SECRET'])
+    print(os.getenv('CORP_ID') is not None)
+    print(os.getenv('CORP_SECRET') is not None)
     assert True
